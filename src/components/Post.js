@@ -1,17 +1,23 @@
 import React, {
-    Component as RC
+  Component as RC
 } from 'react';
 
 class Post extends RC {
-    constructor(props)
-    {
-      super(props);
-    }
-    render()
-    {
-      return (
-        <div></div>
-      )
-    }
+  constructor(props)
+  {
+    super(props);
   }
-  export default Post;
+  render()
+  {
+    return (
+      <div className="blogPost">
+        <h3>{this.props.title}</h3>
+        <div className="postContent">
+          {this.props.content}
+        </div>
+        <div style={{color: 'green'}}>Author: {this.props.author}</div>
+      </div>
+    )
+  }
+}
+export default Post;
